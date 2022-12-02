@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { IonIcon } from '@ionic/react';
 import {
   logoFacebook,
@@ -8,6 +10,12 @@ import {
 } from 'ionicons/icons';
 
 const Header = props => {
+  const navigate = useNavigate();
+
+  const redirect = () => {
+    navigate('/');
+  };
+
   return (
     <header className="shop-header-section">
       <img
@@ -17,12 +25,9 @@ const Header = props => {
       />
 
       <div className="redirect-nav">
-        <a
-          className="link redirect-link"
-          href="https://www.elijahjamesandthenightmares.com"
-        >
+        <span className="link redirect-link" onClick={redirect}>
           Go to EJANDTN website
-        </a>
+        </span>
 
         <div className="icon-nav">
           <ul className="nav-icons">

@@ -1,12 +1,18 @@
 import { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { IonIcon } from '@ionic/react';
 import { menuOutline, closeOutline } from 'ionicons/icons';
 
 const StickyNav = props => {
   const stickyNavHeightRef = useRef();
+  const navigate = useNavigate();
 
   const [mobNavOpen, setMobNavOpen] = useState(false);
+
+  const redirect = () => {
+    navigate('/shop');
+  };
 
   useEffect(() => {
     props.stickyNavHeightHandler(stickyNavHeightRef.current.offsetHeight);
@@ -83,14 +89,9 @@ const StickyNav = props => {
           </a>
         </li>
         <li>
-          <a
-            className="link sticky-nav-link"
-            href="https://www.elijahjamesandthenightmares.com/shop"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <span className="link sticky-nav-link" onClick={redirect}>
             Shop
-          </a>
+          </span>
         </li>
       </ul>
       <button onClick={toggleNavClose} className="btn-mobile-nav">

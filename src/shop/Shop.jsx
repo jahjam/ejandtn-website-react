@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import './shop-page-style.css';
 import './shop-page-queries.css';
 
@@ -9,6 +11,10 @@ import RedBadge from './comps/products/RedBadge';
 import Footer from './comps/Footer';
 
 const Shop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   function scrollToElement(e) {
     e.preventDefault();
 

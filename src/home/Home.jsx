@@ -12,7 +12,9 @@ const Home = () => {
     <>
       <Header />
       <Subscribe />
+
       <Tour />
+
       <Music />
       <Videos />
       <About />

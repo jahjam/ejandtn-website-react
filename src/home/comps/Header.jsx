@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IonIcon } from '@ionic/react';
 import {
   logoFacebook,
@@ -12,8 +13,13 @@ import StickyNav from './StickyNav';
 
 const Header = () => {
   const headerRef = useRef();
+  const navigate = useNavigate();
   const [stickyNavHeight, setStickyNavHeight] = useState(null);
   let [stickyNavOpen, setStickyNavOpen] = useState(false);
+
+  const redirect = () => {
+    navigate('/shop');
+  };
 
   function scrollToElement(e, refEl) {
     e.preventDefault();
@@ -117,14 +123,9 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a
-                  className="link"
-                  href="https://www.elijahjamesandthenightmares.com/shop"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
+                <span className="link" onClick={redirect}>
                   Shop
-                </a>
+                </span>
               </li>
             </ul>
 
@@ -210,13 +211,13 @@ const Header = () => {
               >
                 Listen
               </button>
-              <a
-                href="https://www.elijahjamesandthenightmares.com/shop"
+              <span
+                onClick={redirect}
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 <button className="btn buy-btn">Buy Here</button>
-              </a>
+              </span>
             </div>
           </div>
         </div>

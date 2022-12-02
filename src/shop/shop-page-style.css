@@ -51,9 +51,9 @@ p {
 BUTTONS
 */
 
-.btn,
-.btn:link,
-.btn:active {
+.shop-btn,
+.shop-btn:link,
+.shop-btn:active {
   font-family: inherit;
   font-size: 1.4rem;
   padding: 1.2rem;
@@ -68,8 +68,8 @@ BUTTONS
   transition: all 0.3s;
 }
 
-.btn:hover,
-.btn:visited {
+.shop-btn:hover,
+.shop-btn:visited {
   transform: scale(1.05);
   border: 0.2rem solid #6e95ce;
 }

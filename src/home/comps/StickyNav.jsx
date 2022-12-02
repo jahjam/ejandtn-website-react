@@ -1,10 +1,12 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 import { IonIcon } from '@ionic/react';
 import { menuOutline, closeOutline } from 'ionicons/icons';
 
 const StickyNav = props => {
   const stickyNavHeightRef = useRef();
+
+  const [mobNavOpen, setMobNavOpen] = useState(false);
 
   useEffect(() => {
     props.stickyNavHeightHandler(stickyNavHeightRef.current.offsetHeight);
@@ -13,6 +15,16 @@ const StickyNav = props => {
   // close mobile nav
   const toggleNavClose = () => {
     props.stickyNavControllerHandler(!!props.stickyNavController);
+  };
+
+  const scrollToElHandler = e => {
+    setMobNavOpen(!mobNavOpen);
+    props.scrollToElement(e, stickyNavHeightRef);
+  };
+
+  const mobNavHandler = () => {
+    setMobNavOpen(!mobNavOpen);
+    stickyNavHeightRef.current.classList.toggle('nav-open');
   };
 
   return (
@@ -26,7 +38,7 @@ const StickyNav = props => {
       }}
     >
       <img
-        onClick={e => props.scrollToElement(e)}
+        onClick={scrollToElHandler}
         href="#"
         src="imgs/ejandtn-logo.png"
         alt="Elijah James And The Nightmares logo"
@@ -36,7 +48,7 @@ const StickyNav = props => {
       <ul className="nav-pages sticky-nav-pages">
         <li>
           <a
-            onClick={e => props.scrollToElement(e)}
+            onClick={scrollToElHandler}
             className="link link-scroll sticky-nav-link"
             href="#tour"
           >
@@ -45,7 +57,7 @@ const StickyNav = props => {
         </li>
         <li>
           <a
-            onClick={e => props.scrollToElement(e)}
+            onClick={scrollToElHandler}
             className="link link-scroll sticky-nav-link"
             href="#music"
           >
@@ -54,7 +66,7 @@ const StickyNav = props => {
         </li>
         <li>
           <a
-            onClick={e => props.scrollToElement(e)}
+            onClick={scrollToElHandler}
             className="link link-scroll sticky-nav-link"
             href="#videos"
           >
@@ -63,7 +75,7 @@ const StickyNav = props => {
         </li>
         <li>
           <a
-            onClick={e => props.scrollToElement(e)}
+            onClick={scrollToElHandler}
             className="link link-scroll sticky-nav-link"
             href="#about"
           >
@@ -82,8 +94,20 @@ const StickyNav = props => {
         </li>
       </ul>
       <button onClick={toggleNavClose} className="btn-mobile-nav">
-        <IonIcon className="icon-mobile-nav" icon={menuOutline}></IonIcon>
-        <IonIcon className="icon-mobile-nav" icon={closeOutline}></IonIcon>
+        {!mobNavOpen && (
+          <IonIcon
+            onClick={mobNavHandler}
+            className="icon-mobile-nav"
+            icon={menuOutline}
+          ></IonIcon>
+        )}
+        {mobNavOpen && (
+          <IonIcon
+            onClick={mobNavHandler}
+            className="icon-mobile-nav"
+            icon={closeOutline}
+          ></IonIcon>
+        )}
       </button>
     </nav>
   );

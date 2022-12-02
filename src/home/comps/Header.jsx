@@ -15,7 +15,7 @@ const Header = () => {
   const [stickyNavHeight, setStickyNavHeight] = useState(null);
   let [stickyNavOpen, setStickyNavOpen] = useState(false);
 
-  function scrollToElement(e) {
+  function scrollToElement(e, refEl) {
     e.preventDefault();
 
     const href = e.target.getAttribute('href');
@@ -43,6 +43,10 @@ const Header = () => {
 
     if (stickyNavOpen) {
       setStickyNavOpen(!!stickyNavOpen);
+    }
+
+    if (refEl.current.classList.contains('nav-open')) {
+      refEl.current.classList.toggle('nav-open');
     }
   }
 

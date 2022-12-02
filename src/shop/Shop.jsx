@@ -1,6 +1,5 @@
-import { useState, useRef } from 'react';
-
 import './shop-page-style.css';
+import './shop-page-queries.css';
 
 import Header from './comps/Header';
 import BIAGVinyl from './comps/products/BIAGVinyl';

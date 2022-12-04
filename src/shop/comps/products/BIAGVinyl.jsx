@@ -11,9 +11,11 @@ const BIAGVinyl = () => {
           className="product-img"
         />
 
-        <h3 className="product-title">Because I'm A Giant Double Vinyl LP</h3>
+        <h3 className="shop-h3 product-title">
+          Because I'm A Giant Double Vinyl LP
+        </h3>
 
-        <p className="product-description">
+        <p className="shop-p product-description">
           Because I'm A Giant features eighteen songs and was recorded over a
           period of three and a half years between 2015-2018. It is the product
           of E. J. Mainwaring travelling round the UK (mostly Liverpool) with a
@@ -27,7 +29,7 @@ const BIAGVinyl = () => {
           necessary lows of growing up.
         </p>
 
-        <h3 className="product-price">£20</h3>
+        <h3 className="shop-h3 product-price">£20</h3>
 
         <h4 className="product-shipping">
           Shipping is calculated at checkout*

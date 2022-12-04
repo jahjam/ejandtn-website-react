@@ -20,14 +20,14 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="footer">
+      <footer className="shop-footer">
         <img
           src="imgs/ejandtn-logo.png"
           alt="Elijah James And The Nightmares logo"
-          className="header-logo logo-footer"
+          className="header-logo shop-logo-footer"
         />
 
-        <div className="footer-links">
+        <div className="shop-footer-links">
           <span
             onClick={openModalHandler}
             data-title="privacy"

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ContainerDivStyled = styled.div`
@@ -9,28 +9,22 @@ const ContainerDivStyled = styled.div`
 
 const Home = React.lazy(() => import('./home/Home'));
 const Shop = React.lazy(() => import('./shop/Shop'));
+const DayTickets = React.lazy(() => import('./day-tickets/DayTickets'));
+const Result = React.lazy(() => import('./day-tickets/Result'));
+const Archive = React.lazy(() => import('./day-tickets/Archive'));
 
 function App() {
+  const location = useLocation();
+
   return (
     <ContainerDivStyled>
-      <Routes>
+      <Routes location={location} key={location.pathname.split('/')[1]}>
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route
-          path="/home"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <Home />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/shop"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <Shop />
-            </Suspense>
-          }
-        ></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/shop" element={<Shop />}></Route>
+        <Route path="/day-tickets" element={<DayTickets />} />
+        <Route path="/day-tickets/:resultId" element={<Result />} />
+        <Route path="/day-tickets/archive" element={<Archive />} />
       </Routes>
     </ContainerDivStyled>
   );

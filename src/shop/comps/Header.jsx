@@ -99,9 +99,9 @@ const Header = props => {
         </div>
       </div>
 
-      <h1 className="title">Shop</h1>
+      <h1 className="shop-h1 title">Shop</h1>
 
-      <p className="shop-description">
+      <p className="shop-p shop-description">
         Welcome to the official Elijah James And The Nightmares ecommerce site.
         Here you can find physical media and various types of merchandise. This
         website was coded by E. J. Mainwaring, and is under constant

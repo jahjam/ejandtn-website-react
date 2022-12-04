@@ -1,5 +1,6 @@
 const loadGigs = callback => {
   const existingScript = document.getElementById('bandsInTownWidget');
+
   if (!existingScript) {
     const script = document.createElement('script');
     script.src = 'https://widget.bandsintown.com/main.min.js';
@@ -9,7 +10,10 @@ const loadGigs = callback => {
     script.onload = () => {
       if (callback) callback();
     };
+  } else {
+    existingScript.parentNode.removeChild(existingScript);
   }
+
   if (existingScript && callback) callback();
 };
 

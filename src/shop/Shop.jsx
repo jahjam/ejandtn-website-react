@@ -46,19 +46,19 @@ const Shop = () => {
 
       <section className="shop-section">
         <div className="vinyl" id="vinyl">
-          <h3 className="section-title">Vinyl</h3>
+          <h3 className="shop-h3 section-title">Vinyl</h3>
           <div className="products">
             <BIAGVinyl />
           </div>
         </div>
         <div className="cd" id="cd">
-          <h3 className="section-title">CD</h3>
+          <h3 className="shop-h3 section-title">CD</h3>
           <div className="products">
             <LFESCd />
           </div>
         </div>
         <div className="misc" id="misc">
-          <h3 className="section-title">Misc</h3>
+          <h3 className="shop-h3 section-title">Misc</h3>
           <div className="products">
             <BlackBadge />
             <RedBadge />

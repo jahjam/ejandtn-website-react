@@ -10,15 +10,15 @@ const RedBadge = () => {
         className="product-img"
       />
 
-      <h3 className="product-title">Red Square Pram Badge</h3>
+      <h3 className="shop-h3 product-title">Red Square Pram Badge</h3>
 
-      <p className="product-description">
+      <p className="shop-p product-description">
         These badges were made to sell at the first ever Elijah James And The
         Nightmares gig. We sold a bunch, but still have a few left, so pick one
         up to wear, or just to collect! They'll never be made again.
       </p>
 
-      <h3 className="product-price">£1</h3>
+      <h3 className="shop-h3 product-price">£1</h3>
 
       <h4 className="product-shipping">Shipping is calculated at checkout*</h4>
 

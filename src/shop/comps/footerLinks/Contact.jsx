@@ -16,7 +16,10 @@ const Contact = props => {
   return (
     <div ref={el} className="footer-drop contact-info" id="contact">
       <div className="footer-content">
-        <button onClick={props.closeModalHandler} className="close-foooter">
+        <button
+          onClick={props.closeModalHandler}
+          className="shop-button close-foooter"
+        >
           Close
         </button>
         <p>
@@ -26,7 +29,10 @@ const Contact = props => {
           </a>
           .
         </p>
-        <button onClick={props.closeModalHandler} className="close-foooter">
+        <button
+          onClick={props.closeModalHandler}
+          className="shop-button close-foooter"
+        >
           Close
         </button>
       </div>

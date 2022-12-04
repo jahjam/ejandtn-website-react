@@ -11,9 +11,11 @@ const LFESCd = () => {
           className="product-img"
         />
 
-        <h3 className="product-title">Live At Elevator Studios EP CD</h3>
+        <h3 className="shop-h3 product-title">
+          Live At Elevator Studios EP CD
+        </h3>
 
-        <p className="product-description">
+        <p className="shop-p product-description">
           On June 10th 2017, Elijah James And The Nightmares stepped into
           Elevator Studios with Tom Roach at the mixing desk to track their
           first set of recordings as a band. Performing totally live, the EP
@@ -21,7 +23,7 @@ const LFESCd = () => {
           piece, encapsulating their live sound.
         </p>
 
-        <h3 className="product-price">£5</h3>
+        <h3 className="shop-h3 product-price">£5</h3>
 
         <h4 className="product-shipping">
           Shipping is calculated at checkout*

@@ -25,24 +25,24 @@ body {
   position: relative;
 }
 
-h1 {
+.shop-h1 {
   font-family: 'rockwell', sans-serif;
   font-size: 2.6rem;
   text-transform: uppercase;
 }
 
-h2 {
+.shop-h2 {
   font-family: 'rockwell', sans-serif;
   font-size: 2.6rem;
   text-transform: uppercase;
 }
 
-h3 {
+.shop-h3 {
   font-family: 'rockwell', sans-serif;
   font-size: 2.2rem;
 }
 
-p {
+.shop-p {
   font-size: 1.4rem;
   line-height: 1.6rem;
 }
@@ -280,7 +280,7 @@ SHOP SECTION
   border: 0.2rem solid #5c98b0;
 }
 
-.footer {
+.shop-footer {
   padding: 2rem;
 
   display: flex;
@@ -288,11 +288,11 @@ SHOP SECTION
   justify-content: space-between;
 }
 
-.logo-footer {
+.shop-logo-footer {
   width: 24rem;
 }
 
-.footer-links {
+.shop-footer-links {
   font-size: 1.4rem;
 
   display: flex;
@@ -321,7 +321,7 @@ SHOP SECTION
   display: none;
 }
 
-button {
+.shop-button {
   margin: 2rem 0 2rem 0;
   padding: 0.6rem;
   cursor: pointer;

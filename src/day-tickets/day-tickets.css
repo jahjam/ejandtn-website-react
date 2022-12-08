@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem #6e94ce;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}

@@ -16,7 +16,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          Built using HTML, CSS, & vanilla JavaScript by E. J. Mainwaring
+          Built using React by E. J. Mainwaring
         </a>
         <br />
         <br />

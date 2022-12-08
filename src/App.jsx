@@ -20,11 +20,48 @@ function App() {
     <ContainerDivStyled>
       <Routes location={location} key={location.pathname.split('/')[1]}>
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/shop" element={<Shop />}></Route>
-        <Route path="/day-tickets" element={<DayTickets />} />
-        <Route path="/day-tickets/:resultId" element={<Result />} />
-        <Route path="/day-tickets/archive" element={<Archive />} />
+        <Route
+          path="/home"
+          element={
+            <Suspense>
+              <Home />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/shop"
+          element={
+            <Suspense>
+              <Shop />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/day-tickets"
+          element={
+            <Suspense>
+              <DayTickets />
+            </Suspense>
+          }
+        >
+          <Route
+            path="/day-tickets/:resultId"
+            element={
+              <Suspense>
+                <Result />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/day-tickets/archive"
+            element={
+              <Suspense>
+                <Archive />
+              </Suspense>
+            }
+          />
+        </Route>
       </Routes>
     </ContainerDivStyled>
   );

@@ -31,11 +31,11 @@
     font-size: 1.8rem;
   }
 
-  .logo-footer {
+  .shop-logo-footer {
     width: 16rem;
   }
 
-  .footer-links {
+  .shop-footer-links {
     font-size: 1.2rem;
   }
 }
@@ -80,17 +80,17 @@
     font-size: 2rem;
   }
 
-  .footer {
+  .shop-footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .logo-footer {
+  .shop-logo-footer {
     width: 18rem;
   }
 
-  .footer-links {
+  .shop-footer-links {
     font-size: 1.3rem;
     gap: 1.2rem;
   }
@@ -150,17 +150,17 @@
     font-size: 2rem;
   }
 
-  .footer {
+  .shop-footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .logo-footer {
+  .shop-logo-footer {
     width: 18rem;
   }
 
-  .footer-links {
+  .shop-footer-links {
     font-size: 1.3rem;
     gap: 1.2rem;
   }

@@ -1,6 +1,6 @@
 const LoadGigsBtn = () => {
   return (
-    <a
+    <span
       className="bit-widget-initializer"
       data-artist-name="id_3051773"
       data-font="Roboto"
@@ -13,7 +13,7 @@ const LoadGigsBtn = () => {
       data-link-color="#f0f2e6"
       data-link-text-color="#090d16"
       data-display-past-dates="false"
-    ></a>
+    ></span>
   );
 };
 

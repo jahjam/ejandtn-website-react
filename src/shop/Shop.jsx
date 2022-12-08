@@ -66,9 +66,13 @@ const Shop = () => {
         </div>
       </section>
 
-      <a onClick={scrollToElement} className="back-to-top link-scroll" href="#">
+      <span
+        onClick={scrollToElement}
+        className="back-to-top link-scroll"
+        href="#"
+      >
         Back to Top
-      </a>
+      </span>
 
       <Footer />
     </div>

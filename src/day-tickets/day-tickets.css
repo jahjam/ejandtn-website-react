@@ -16,6 +16,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #090d16;
+}
+
 @keyframes cursor-blink {
   0% {
     opacity: 0;

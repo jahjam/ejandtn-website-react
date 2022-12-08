@@ -12,6 +12,11 @@ import Result from './Result';
 
 import { sortTicketsByDateFn } from './utils/sortTix';
 
+const Body = styled.div`
+  height: 100vh;
+  background-color: #090d16;
+`;
+
 const Container = styled.div`
   height: 100%;
   font-family: lores-12, sans-serif;
@@ -142,26 +147,28 @@ const DayTickets = () => {
   }, [location.pathname]);
 
   return (
-    <Container>
-      <Header>
-        <Heading onClick={refresh}>Day Tickets</Heading>
-      </Header>
+    <Body>
+      <Container>
+        <Header>
+          <Heading onClick={refresh}>Day Tickets</Heading>
+        </Header>
 
-      <Link onClick={redirect}>Go to EJANDTN website</Link>
+        <Link onClick={redirect}>Go to EJANDTN website</Link>
 
-      {/* <Form>
+        {/* <Form>
         <input />
         <button>Search</button>
       </Form> */}
 
-      <Link onClick={goToArchive}>Past tickets</Link>
+        <Link onClick={goToArchive}>Past tickets</Link>
 
-      {ticketObj && location.pathname === '/day-tickets' && (
-        <Result ticket={ticketObj} />
-      )}
+        {ticketObj && location.pathname === '/day-tickets' && (
+          <Result ticket={ticketObj} />
+        )}
 
-      <Outlet />
-    </Container>
+        <Outlet />
+      </Container>
+    </Body>
   );
 };
 

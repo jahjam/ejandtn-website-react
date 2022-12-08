@@ -73,35 +73,35 @@ const Link = styled.a`
   }
 `;
 
-const Form = styled.form`
-  display: flex;
-  gap: 1rem;
+// const Form = styled.form`
+//   display: flex;
+//   gap: 1rem;
 
-  input {
-    height: 3rem;
-    width: 18rem;
-    padding: 1rem;
-    font-family: inherit;
-    background-color: transparent;
-    border: 0.2rem solid #f0f2e6;
-    color: #f0f2e6;
-  }
+//   input {
+//     height: 3rem;
+//     width: 18rem;
+//     padding: 1rem;
+//     font-family: inherit;
+//     background-color: transparent;
+//     border: 0.2rem solid #f0f2e6;
+//     color: #f0f2e6;
+//   }
 
-  button {
-    height: 3rem;
-    width: 8rem;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    background-color: #f0f2e6;
+//   button {
+//     height: 3rem;
+//     width: 8rem;
+//     border: none;
+//     cursor: pointer;
+//     font-family: inherit;npm r
+//     background-color: #f0f2e6;
 
-    &:hover {
-      background-color: #090d16;
-      border: 0.2rem solid #f0f2e6;
-      color: #f0f2e6;
-    }
-  }
-`;
+//     &:hover {
+//       background-color: #090d16;
+//       border: 0.2rem solid #f0f2e6;
+//       color: #f0f2e6;
+//     }
+//   }
+// `;
 
 const DayTickets = () => {
   const [ticketObj, setTicket] = useState(null);

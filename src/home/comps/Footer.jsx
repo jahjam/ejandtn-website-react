@@ -7,7 +7,7 @@ const Footer = () => {
       <img
         src="imgs/ejandtn-logo.png"
         alt="Elijah James And The Nightmares logo"
-        className="header-logo logo-footer"
+        className="logo-footer"
       />
       <span>
         <a

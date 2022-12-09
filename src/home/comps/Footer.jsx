@@ -12,7 +12,7 @@ const Footer = () => {
       <span>
         <a
           className="link"
-          href="https://github.com/dreamingOfSoy/ejandtn-website"
+          href="https://github.com/dreamingOfSoy/ejandtn-website-react"
           target="_blank"
           rel="noreferrer noopener"
         >

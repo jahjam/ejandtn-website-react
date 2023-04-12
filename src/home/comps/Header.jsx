@@ -51,7 +51,7 @@ const Header = () => {
       setStickyNavOpen(!!stickyNavOpen);
     }
 
-    if (refEl.current.classList.contains('nav-open')) {
+    if (refEl?.current.classList.contains('nav-open')) {
       refEl.current.classList.toggle('nav-open');
     }
   }

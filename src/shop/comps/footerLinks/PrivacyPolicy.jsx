@@ -31,7 +31,7 @@ const PrivacyPolicy = props => {
           your items to you, and that is all. This website is essentially a
           digital merch table, but the below information is now a requirement, I
           think - I don't really know what it all means, to be honest. I can
-          barely sell a CD of my own music, nevermind somebodys data.
+          barely sell a CD of my own music, never mind somebody's data.
         </p>
         <div className="WordSection1">
           <h3 className="shop-h3">Contact</h3>
